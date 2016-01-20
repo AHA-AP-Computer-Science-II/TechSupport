@@ -12,6 +12,11 @@ import org.json.JSONObject;
 public class TechSupportModel {
 
 	public static void main(String[]args){
+		try {
+			JSONDemo("https://www.youtube.com/watch?v=phAKccY6M9I");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	public static void JSONDemo(String addr) throws IOException{
 		// build a URL
