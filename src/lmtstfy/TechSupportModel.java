@@ -21,7 +21,10 @@ public class TechSupportModel {
 	}
 	public static void JSONDemo(String addr) throws IOException{
 			URL url = new URL("https://graph.facebook.com/search?q=java&type=post");
-			try (InputStream is = url.openStream()
-				JSONParser parser = new JSONParser();
+			try (InputStream is = url.openStream()){
+				
+			}catch(IOException e){
+				e.printStackTrace();
+			}
 		}
 	}
