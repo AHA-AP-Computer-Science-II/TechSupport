@@ -8,6 +8,9 @@ Brought to you by AHA-AP-Computer-Science-II team members Caleb Reiter, Matt Far
 **Does not include mandatory shipping and handling fee of up to $99.99.
 
 #Changelog:
+Version 1.2:
+DO WE EVEN NEED JSON!?
+
 Version 1.1:
 What even is JSON
 
