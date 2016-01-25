@@ -17,7 +17,7 @@ public class TechSupportModel {
 			JSONDemo("tree");
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		}   
 	}
 	public static void JSONDemo(String addr) throws IOException{
 			URL url = new URL("https://graph.facebook.com/search?q=java&type=post");
