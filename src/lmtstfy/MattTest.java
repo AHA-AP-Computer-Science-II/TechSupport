@@ -2,8 +2,7 @@ package lmtstfy;
 
 public class MattTest {
 
-	public MattTest() {
-		// TODO Auto-generated constructor stub
+	public static void main(String[]args){
 	}
 
 }
