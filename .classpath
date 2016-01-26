@@ -2,10 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-<<<<<<< HEAD
 	<classpathentry kind="lib" path="res/lib/json-20151123.jar"/>
-=======
-	<classpathentry kind="lib" path="res/lib/gson-2.3.1.jar"/>
->>>>>>> branch 'master' of https://github.com/AHA-AP-Computer-Science-II/TechSupport.git
 	<classpathentry kind="output" path="bin"/>
 </classpath>
