@@ -1,10 +1,10 @@
 package lmtstfy;
 
-import java.util.Scanner;
+import java.util.Optional;
 
 import javafx.application.Application;
-import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
@@ -18,16 +18,23 @@ public class CalebTest extends Application {
 	@Override
 	public void start(Stage stage) throws Exception {
 
-		Scanner scan = new Scanner(System.in);
-		
 		stage.setTitle("Tech Support");
 		
-		Group root = new Group();
 		WebView browser = new WebView();
 		WebEngine engine = browser.getEngine();
 		
-		System.out.print("Enter your problem: ");
-		String problem = scan.nextLine();
+		TextInputDialog dialog = new TextInputDialog("");
+		dialog.setTitle("Text Input Dialog");
+		dialog.setHeaderText("How may I help you?");
+		dialog.setContentText("Please enter your name:");
+
+		// Traditional way to get the response value.
+		Optional<String> result = dialog.showAndWait();
+		if (result.isPresent()){
+		    System.out.println("Your name: " + result.get());
+		}
+		
+		String problem = "";
 		
 		for (int i = 0; i < problem.length(); i++) {
 			if (problem.charAt(i) == ' ') {
