@@ -1,21 +1,61 @@
 package lmtstfy;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URL;
+import java.util.Optional;
 
-public class CalebTest {
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.control.TextInputDialog;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
+import javafx.stage.Stage;
 
-	public static void main(String[] args) throws Exception {
+public class CalebTest extends Application {
+	public static void main(String[]args){
+		launch(args);
+	}
 
-        URL oracle = new URL("http://www.oracle.com/");
-        BufferedReader in = new BufferedReader(
-        new InputStreamReader(oracle.openStream()));
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		primaryStage.setTitle("Tech Support");
+		
+		Group root = new Group();
+		WebView browser = new WebView();
+		WebEngine engine = browser.getEngine();
+		
+		TextInputDialog dialog = new TextInputDialog("");
+		dialog.setTitle("Tech Support (give it a minute)");
+		dialog.setHeaderText("How may I help you?");
+		dialog.setContentText("Enter your problem: ");
 
-        String inputLine;
-        while ((inputLine = in.readLine()) != null)
-            System.out.println(inputLine);
-        in.close();
-    }
-	
+		// Traditional way to get the response value.
+		Optional<String> result = dialog.showAndWait();
+		String problem = result.get();
+		replaceAll(problem);
+		
+		engine.load("http://www.google.com/");
+//		engine.load("http://lmgtfy.com/?q="+problem+"&l=1");
+		
+	}
+	public static void replaceAll(String problem){
+		replace(problem, ' ',"+");
+		replace(problem, '\'',"%27");
+		replace(problem, '%',"%25");
+		replace(problem, '^',"%5E");
+		replace(problem, '?',"%3F");
+		replace(problem, '#',"%23");
+		replace(problem, '&',"%26");
+		replace(problem, '@',"%40");
+		replace(problem, '$',"%24");
+		replace(problem, '+',"%2B");
+		replace(problem, '=',"%3D");
+		replace(problem, ':',"%3A");
+		replace(problem, ';',"%3B");
+	}
+	public static void replace(String problem, char c, String key){
+		for(int i = 0; i < problem.length() ; i++){
+			if(problem.charAt(i) == c)
+				problem = problem.substring(0, i) + key + problem.substring(i+1);
+		}
+	}
 }
+
