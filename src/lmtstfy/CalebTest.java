@@ -44,6 +44,18 @@ public class CalebTest extends Application {
 		replace(problem, ':',"%3A");
 		replace(problem, ';',"%3B");
 		replace(problem, '"',"%22");
+		/* ^ -- %5E
+		 * ? -- %3F
+		 * # -- %23
+		 * @ -- %40
+		 * $ -- %24
+		 * & -- %26
+		 * + -- %2B
+		 * = -- %3D
+		 * : -- %3A
+		 * ; -- %3B
+		 * " -- %22
+		 */
 	}
 	public static void replace(String problem, char c, String replace) {
 		for (int i = 0; i < problem.length(); i++) {
