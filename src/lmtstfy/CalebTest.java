@@ -24,19 +24,23 @@ public class CalebTest extends Application {
 		WebEngine engine = browser.getEngine();
 		
 		TextInputDialog dialog = new TextInputDialog("");
-		dialog.setTitle("Text Input Dialog");
+		dialog.setTitle("Tech Support");
 		dialog.setHeaderText("How may I help you?");
-		dialog.setContentText("Please enter your name:");
+		dialog.setContentText("Problem: ");
 
 		// Traditional way to get the response value.
 		Optional<String> result = dialog.showAndWait();
+		String problem = "";
+
+		//engine.load("http://lmgtfy.com/?q=" + problem + "&l=1");
+
 		if (result.isPresent()){
-		    System.out.println("Your name: " + result.get());
+			problem = result.get();
 		}
 		
-		String problem = "";
-				
-		engine.load("http://lmgtfy.com/?q=" + problem + "&l=1");
+		engine.load("http://www.google.com/webhp?#q=" + problem +" windows 7 my computer won't start"
+				+ "troubleshoot" + "&btnI=I");
+
 		Scene scene = new Scene(browser);
 		
 		stage.setScene(scene);
