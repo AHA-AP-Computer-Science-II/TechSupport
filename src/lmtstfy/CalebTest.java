@@ -38,8 +38,7 @@ public class CalebTest extends Application {
 			problem = result.get();
 		}
 		
-		engine.load("http://www.google.com/webhp?#q=" + problem +" windows 7 my computer won't start"
-				+ "troubleshoot" + "&btnI=I");
+		engine.load("http://www.google.com/webhp?#q=" + problem + "windows 7 troubleshoot" + "&btnI=I");
 
 		Scene scene = new Scene(browser);
 		
