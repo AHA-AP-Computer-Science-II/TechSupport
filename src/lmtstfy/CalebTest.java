@@ -35,17 +35,7 @@ public class CalebTest extends Application {
 		}
 		
 		String problem = "";
-		
-		for (int i = 0; i < problem.length(); i++) {
-			if (problem.charAt(i) == ' ') {
-				problem = problem.substring(0, i) + "+" + problem.substring(i + 1);
-			}
-			
-			if (problem.charAt(i) == '\'') {
-				problem = problem.substring(0, i) + "%27" + problem.substring(i + 1);
-			}
-		}
-		
+				
 		engine.load("http://lmgtfy.com/?q=" + problem + "&l=1");
 		Scene scene = new Scene(browser);
 		
@@ -53,6 +43,17 @@ public class CalebTest extends Application {
 		
 		stage.show();
 		
+	}
+	
+	public static void replaceAll(String problem) {
+	}
+	
+	public static void replace(String problem, char c, String replace) {
+		for (int i = 0; i < problem.length(); i++) {
+			if (problem.charAt(i) == c)
+				problem = problem.substring(0, i) + replace + problem.substring(i + 1);
+		}
+
 	}
 	
 }
