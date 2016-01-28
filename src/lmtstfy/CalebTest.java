@@ -51,15 +51,15 @@ public class CalebTest extends Application {
 	public static void replaceAll(String problem) {
 		/* ^ -- %5E
 		 * ? -- %3F
-		 * # -- %23
+		 * # -- %23 ???
 		 * @ -- %40
 		 * $ -- %24
-		 * & -- %26
-		 * + -- %2B
-		 * = -- %3D
-		 * : -- %3A
-		 * ; -- %3B
-		 * " -- %22
+		 * & -- %26 ???
+		 * + -- %2B ???
+		 * = -- %3D ???
+		 * : -- %3A ???
+		 * ; -- %3B ???
+		 * " -- %22 ???
 		 */
 		 
 		
