@@ -38,7 +38,7 @@ public class TechSupport{
 		
 		replaceAll();
 		
-		engine.load("http://lmgtfy.com/?q=" + problem + "&l=1");
+		engine.load("http://lmgtfy.com/?q=" + problem + "windows 7 troubleshoot" + "&l=1");
 		
 		Scene scene = new Scene(browser);
 		stage.setScene(scene);
