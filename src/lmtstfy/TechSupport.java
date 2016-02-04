@@ -8,14 +8,14 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
-public class TechSupportFINAL{
+public class TechSupport{
 
 	private String problem = "";
 	WebView browser;
 	WebEngine engine;
 	TextInputDialog dialog;
 	
-	public TechSupportFINAL() {
+	public TechSupport() {
 		browser = new WebView();
 		engine = browser.getEngine();
 		dialog = new TextInputDialog();
@@ -36,9 +36,7 @@ public class TechSupportFINAL{
 			problem = result.get();
 		}
 		
-		System.out.println(problem);
 		replaceAll();
-		System.out.println(problem);
 		
 		engine.load("http://lmgtfy.com/?q=" + problem + "&l=1");
 		
